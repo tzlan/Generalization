@@ -28,15 +28,14 @@ public class Paire <X,Y>{
                 ;
     }
 
-    public void changeFst (){
-        this.fst = fst;
-    }
-    public void changeSnd (){
-
+    public  <A> Paire < A,Y > changeFst (A fst){
+        return new Paire(fst, this.getSnd() );
     }
 
-    public static void main( String [] args ) {
-
-
+    public  <A> Paire < X,A > changeSnd (A snd){
+        return new Paire(this.getFst(),snd );
     }
+
+
+
 }
