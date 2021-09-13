@@ -27,11 +27,11 @@ public class Paire <X,Y>{
 
                 ;
     }
-
+    //Ici en enlevant X dans les <> on donne a X le type de A
     public  <A> Paire < A,Y > changeFst (A fst){
         return new Paire(fst, this.getSnd() );
     }
-
+    //En mettant le A ici on remplace le type de base de Y
     public  <A> Paire < X,A > changeSnd (A snd){
         return new Paire(this.getFst(),snd );
     }
